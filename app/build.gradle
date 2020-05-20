@@ -1,0 +1,89 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+
+    defaultConfig {
+        applicationId "com.example.challange"
+        minSdkVersion 21
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+}
+
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    // Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+
+    // Support Libraries
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.core:core-ktx:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta6'
+    // and a bit of material
+    implementation 'com.google.android.material:material:1.1.0'
+
+    //Let's topGun
+    implementation 'com.airbnb.android:mvrx:1.5.0'
+
+    //Location services
+    implementation "com.google.android.gms:play-services-location:16.0.0"
+    implementation "com.google.android.gms:play-services-base:16.0.0"
+
+    //Json
+    implementation 'com.squareup.moshi:moshi:1.9.2'
+    implementation 'com.squareup.moshi:moshi-kotlin:1.9.2'
+    kapt 'com.squareup.moshi:moshi-kotlin-codegen:1.9.2'
+
+    //Network
+    implementation 'com.squareup.retrofit2:retrofit:2.8.2'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.8.2'
+    implementation 'com.squareup.retrofit2:converter-moshi:2.8.2'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.14.7'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.19'
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.4.0'
+
+    //For instrumented tests
+    implementation 'androidx.test.espresso:espresso-idling-resource:3.2.0'
+    //DI
+    implementation 'org.koin:koin-android:2.1.5'
+    implementation 'org.koin:koin-androidx-viewmodel:2.1.5'
+    implementation 'org.koin:koin-androidx-scope:2.1.5'
+
+    testImplementation 'junit:junit:4.13'
+    testImplementation 'androidx.test:runner:1.2.0'
+    testImplementation 'androidx.test.ext:junit:1.1.1'
+    testImplementation 'org.mockito:mockito-core:3.3.3'
+    testImplementation 'com.airbnb.android:mvrx-testing:1.5.0'
+
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-idling-resource:3.2.0'
+
+}

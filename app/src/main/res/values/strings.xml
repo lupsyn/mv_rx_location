@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">App Works Challenge</string>
+    <string name="update_postcode">Update PostCode</string>
+    <string name="postCode">Your postcode is \n %1$s</string>
+    <string name="coordinates">Your latitude is %1$s \n and your longitude is %2$s</string>
+    <string name="unknown">unknown</string>
+</resources>

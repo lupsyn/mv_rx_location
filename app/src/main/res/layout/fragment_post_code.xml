@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:orientation="vertical">
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="@dimen/sixtyEight"
+        android:layout_height="@dimen/sixtyEight"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/coordinates"
+        style="@style/SmallBodyTextStyle"
+        android:layout_marginBottom="@dimen/eightyTwo"
+        android:text="@string/coordinates"
+        app:layout_constraintBottom_toTopOf="@+id/postcode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/postcode"
+        style="@style/BigBodyTextStyle"
+        android:text="@string/postCode"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/refresh"
+        android:layout_width="@dimen/twoHundred"
+        android:layout_height="@dimen/fortyFour"
+        android:layout_marginTop="@dimen/eightyTwo"
+        android:fontFamily="@font/arial"
+        android:textStyle="bold"
+        android:backgroundTint="@color/colorAccent"
+        android:text="@string/update_postcode"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/postcode" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

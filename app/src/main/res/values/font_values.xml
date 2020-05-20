@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="MainFontStyle">
+        <item name="android:fontFamily">@font/arial</item>
+    </style>
+
+    <style name="normalBody" parent="MainFontStyle">
+        <item name="android:textSize">@dimen/body_16</item>
+    </style>
+
+    <style name="bigBody" parent="MainFontStyle">
+        <item name="android:textSize">@dimen/body_28</item>
+    </style>
+</resources>

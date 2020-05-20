@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="sixtyEight">68dp</dimen>
+    <dimen name="twoHundred">200dp</dimen>
+    <dimen name="fortyFour">44dp</dimen>
+    <dimen name="eight">8dp</dimen>
+    <dimen name="eightyTwo">82dp</dimen>
+</resources>
